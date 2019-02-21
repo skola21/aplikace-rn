@@ -1,0 +1,13 @@
+{
+     "compilerOptions": {
+        "sourceMap": true,
+        "strict": true,
+        "jsx": "react",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["esnext", "dom"],
+        "resolveJsonModule": true
+     }
+}
