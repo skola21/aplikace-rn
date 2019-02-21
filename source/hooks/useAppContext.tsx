@@ -1,13 +1,7 @@
 import * as React from 'react'
 
-import { AppContext } from '../App'
+import { createUseContext } from '../utils'
 
-export const useAppContext = () => {
-    const appContext = React.useContext(AppContext)
-    
-	if (appContext == null) {
-		throw Error('useAppContext: Please provide AppContext value.') // TODO zpracovat tenhle problemotvoric (e.g. vytvorit nekde nahore proper exception handling)
-    }
-    
-	return appContext
-}
+import { AppContext } from '../contexts/AppContext'
+
+export const useAppContext = createUseContext(AppContext)
