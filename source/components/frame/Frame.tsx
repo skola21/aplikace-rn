@@ -8,8 +8,26 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
 
-    header: {},
+    left: {
+        flexDirection: 'row',
+        backgroundColor: 'red',
+    },
 
+    right: {
+        flexDirection: 'row',
+    },
+
+    header: {
+        backgroundColor: 'lightgray',
+    },
+
+    content: {
+        backgroundColor: 'white',
+    },
+
+    rightPane: {
+        backgroundColor: 'darkgray',
+    },
 })
 
 interface FrameProps {
@@ -20,32 +38,41 @@ interface FrameProps {
 export const Frame: React.FunctionComponent<FrameProps> = (props) => {
     return (
         <View style={styles.wrapper}>
-            <View style={styles.header}>
-                <View>
-                    {/* tlacitko menu */}
-                </View>
+            <View style={styles.left}>
+                <View style={styles.header}>
+                    <View>
+                        {/* tlacitko menu a home */}
+                    </View>
 
-                <View>
-                    {/* taby */}
-                </View>
+                    <View>
+                        {/* levy taby */}
+                    </View>
 
-                <View>
-                    {/* cloud */}
-                </View>
-            </View>
-
-            <View style={styles.body}>
-                <View style={styles.navigation}>
+                    <View>
+                        {/* tlacitko se sipkou dolu na taby co se nevesly
+                         pokud v right nic neni, tak tady i cloud */}
+                    </View>
                 </View>
 
                 <View style={styles.content}>
-                    <TabContext.Provider value={null}>
-                        {props.content}
-                    </TabContext.Provider>
+                    
+                </View>
+            </View>
+
+            <View style={styles.left}>
+                <View style={styles.header}>
+                    <View>
+                        {/* pravy taby */}
+                    </View>
+
+                    <View>
+                        {/* tlacitko se sipkou dolu na taby co se nevesly
+                        tady vzdycky cloud */}
+                    </View>
                 </View>
 
-                <View style={styles.rightPane}>
-                    {props.rightPaneContent}
+                <View style={styles.content}>
+                    
                 </View>
             </View>
         </View>
