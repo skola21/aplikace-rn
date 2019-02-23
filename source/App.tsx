@@ -11,7 +11,7 @@ import { Frame } from './components/frame/Frame'
 export const App: React.FunctionComponent = () => {
 	return (
 		<AppContext.Provider value={{ theme, strings }}>
-			<Frame content={<View />} rightPaneContent={<View />} />
+			<Frame />
 		</AppContext.Provider>
 	)
 }
